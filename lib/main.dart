@@ -1,8 +1,8 @@
-import 'package:flutter/material.dart' ;
+import 'package:flutter/material.dart';
+import 'package:quize_app/quiz.dart';
 
-
-void main (){
-  return runApp(const MaterialApp(
-    home: Scaffold(body: Text('hello'),),
-  ));
+void main() {
+  return runApp(
+    const Quiz()
+  );
 }
