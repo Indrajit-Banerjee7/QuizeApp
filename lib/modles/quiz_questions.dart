@@ -4,4 +4,10 @@ class QuizQuestions {
 
   final String text ;
   final List<String> answers ; 
+
+  List<String> suffeledans(){
+    final dublicatedans = List.of(answers);
+    dublicatedans.shuffle();
+    return dublicatedans ;
+  }
 }
