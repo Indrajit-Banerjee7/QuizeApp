@@ -40,6 +40,7 @@ class ResultScreen extends StatelessWidget{
         ),
          SizedBox(
           width: 300,
+          height: 380,
           child:ResultBox(summery),
          ),
         //  ...anslistResScreen.map(
