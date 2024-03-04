@@ -38,9 +38,16 @@ class _QuizeState extends State<Quiz> {
     //print(anslist);
     if(anslist.length>=quetions.length){
       setState(() {
-        activescreen =  ResultScreen(anslist) ; 
+        activescreen =  ResultScreen(anslist , restartButton) ; 
       });
     }
+  }
+
+  void restartButton (){
+    anslist.clear();
+    setState(() {
+      activescreen = StartScreen(setscreen);
+    });
   }
 
 

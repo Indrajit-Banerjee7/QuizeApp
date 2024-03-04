@@ -4,8 +4,9 @@ import 'package:quize_app/restultbox.dart';
 
 
 class ResultScreen extends StatelessWidget{
-  const ResultScreen(this.anslistResScreen ,{super.key});
+  const  ResultScreen(this.anslistResScreen, this.restartButton ,{super.key});
   final List<String>anslistResScreen ;
+  final void Function() restartButton ;
 
   List<Map<String , Object>> resultSummeryfunc(){
     final List<Map<String, Object>> summery = [];
@@ -21,21 +22,26 @@ class ResultScreen extends StatelessWidget{
     }
     return summery;
   }
+  //const b = resultSummeryfunc() ;
   
 
   @override
   Widget build(BuildContext context) {
+    final List<Map<String, Object>> summery = resultSummeryfunc();
+    final totalq = quetions.length ;
+    final correctA = summery.fold(0, (prev, element) => prev + (element['correct_ans'] == element['your_ans'] ? 1 : 0)); // Calculate a 
+
     return Center(child: Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        const Text('You have answered 5 out of 6 questions currectly !'),
+        Text('You have answered $correctA out of $totalq questions currectly !'),
         const SizedBox(
           height: 25,
         ),
-         const SizedBox(
-          
+         SizedBox(
+          width: 300,
+          child:ResultBox(summery),
          ),
-         ResultBox(resultSummeryfunc()),
         //  ...anslistResScreen.map(
         //       (item) {
         //         return Text(item);
@@ -45,7 +51,7 @@ class ResultScreen extends StatelessWidget{
         const SizedBox(
           height: 25,
         ),
-        ElevatedButton(onPressed: (){}, child: const Text('restart quiz'),),
+        ElevatedButton(onPressed: restartButton, child: const Text('restart quiz'),),
       ],
     ),);
   }
