@@ -38,7 +38,7 @@ class _QuizeState extends State<Quiz> {
     //print(anslist);
     if(anslist.length>=quetions.length){
       setState(() {
-        activescreen = const ResultScreen() ; 
+        activescreen =  ResultScreen(anslist) ; 
       });
     }
   }
