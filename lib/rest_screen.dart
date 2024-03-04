@@ -34,7 +34,13 @@ class ResultScreen extends StatelessWidget{
     return Center(child: Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Text('You have answered $correctA out of $totalq questions currectly !'),
+        Text(
+          'You have answered $correctA out of $totalq questions currectly !' ,
+          style: const TextStyle(
+            color: Color.fromARGB(255, 144, 48, 4),
+          ),
+        
+        ),
         const SizedBox(
           height: 25,
         ),
@@ -52,7 +58,12 @@ class ResultScreen extends StatelessWidget{
         const SizedBox(
           height: 25,
         ),
-        ElevatedButton(onPressed: restartButton, child: const Text('restart quiz'),),
+        ElevatedButton(onPressed: restartButton, style: ElevatedButton.styleFrom(
+          foregroundColor: const Color.fromARGB(255, 17, 16, 16),
+          backgroundColor: const Color.fromARGB(255, 166, 252, 177),
+        ),
+         child: const Text('restart quiz'),
+         ),
       ],
     ),);
   }
