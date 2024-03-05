@@ -49,13 +49,13 @@ class ResultBox extends StatelessWidget {
                                 : Colors.red, // Highlight incorrect answer
                           ),
                         ),
-                        Text(
-                          'Correct Ans: ${e['correct_ans'].toString()}',
-                          style: const TextStyle(
-                            fontSize: 14,
-                            color: Color.fromARGB(255, 44, 100, 46),
+                          Text(
+                            'Correct Ans: ${e['correct_ans'].toString()}',
+                            style: const TextStyle(
+                              fontSize: 14,
+                              color: Color.fromARGB(255, 44, 100, 46),
+                            ),
                           ),
-                        ),
                       ],
                     ),
                   ),

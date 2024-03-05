@@ -1,55 +1,55 @@
 import 'package:quize_app/modles/quiz_questions.dart';
 
 const  quetions = [
-  QuizQuestions(
-    'What are the main building blocks of Flutter UIs?',
+ QuizQuestions(
+    'Which international organization promotes economic cooperation member countries?',
     [
-      'Widgets',
-      'Components',
-      'Blocks',
-      'Functions',
+      'WTO',
+      'UNESCO',
+      'OECD',
+      'OPEC',
     ],
   ),
-  QuizQuestions('How are Flutter UIs built?', [
-    'By combining widgets in code',
-    'By combining widgets in a visual editor',
-    'By defining widgets in config files',
-    'By using XCode for iOS and Android Studio for Android',
+  QuizQuestions('What is the full form of IMEC ?', [
+    'India-Middle East-Europe Economic Corridor',
+    'International Monetary Exchange Council',
+    'Integrated Manufacturing and Engineering Consortium',
+    'Intercontinental Migration and Employment Commission',
   ]),
   QuizQuestions(
-    'What\'s the purpose of a StatefulWidget?',
+    'Which country is the largest producer of semiconductors in the world?',
     [
-      'Update UI as data changes',
-      'Update data as UI changes',
-      'Ignore data changes',
-      'Render UI that does not depend on data',
+      'Taiwan',
+      'Japan',
+      'China',
+      'USA',
     ],
   ),
   QuizQuestions(
-    'Which widget should you try to use more often: StatelessWidget or StatefulWidget?',
+    'which country has the largest proven oil reserves?',
     [
-      'StatelessWidget',
-      'StatefulWidget',
-      'Both are equally good',
-      'None of the above',
+      'Venezuela',
+      'Saudi Arabia',
+      'Russia',
+      'USA',
     ],
   ),
   QuizQuestions(
-    'What happens if you change data in a StatelessWidget?',
+    'Which is the biggest asset management company in the world?',
     [
-      'The UI is not updated',
-      'The UI is updated',
-      'The closest StatefulWidget is updated',
-      'Any nested StatefulWidgets are updated',
+      'BlackRock',
+      'Morgan Stanley',
+      'JPMorgan Chase',
+      'Apple',
     ],
   ),
   QuizQuestions(
-    'How should you update data inside of StatefulWidgets?',
+    'Which country has the largest fresh water lake in the world?',
     [
-      'By calling setState()',
-      'By calling updateData()',
-      'By calling updateUI()',
-      'By calling updateState()',
+      'Russia',
+      'Brazil',
+      'India',
+      'China',
     ],
   ),
 ];
