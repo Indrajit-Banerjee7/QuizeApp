@@ -10,12 +10,6 @@ const  quetions = [
       'OPEC',
     ],
   ),
-  QuizQuestions('What is the full form of IMEC ?', [
-    'India-Middle East-Europe Economic Corridor',
-    'International Monetary Exchange Council',
-    'Integrated Manufacturing and Engineering Consortium',
-    'Intercontinental Migration and Employment Commission',
-  ]),
   QuizQuestions(
     'Which country is the largest producer of semiconductors in the world?',
     [

@@ -18,7 +18,7 @@ class StartScreen extends StatelessWidget {
           const SizedBox(
             height: 81,
           ),
-          const Text('Try Luring flutter the fun way!' , style: TextStyle(
+          const Text('Test your Geopolitical Knowledge!' , style: TextStyle(
             color: Color.fromARGB(255, 238, 242, 243),
             fontSize: 23 , 
           ),),

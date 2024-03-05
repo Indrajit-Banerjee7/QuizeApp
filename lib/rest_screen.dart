@@ -37,7 +37,9 @@ class ResultScreen extends StatelessWidget{
         Text(
           'You have answered $correctA out of $totalq questions currectly !' ,
           style: const TextStyle(
-            color: Color.fromARGB(255, 144, 48, 4),
+            color: Color.fromARGB(255, 248, 245, 243),
+            fontWeight: FontWeight.bold,
+            fontSize: 16
           ),
         
         ),

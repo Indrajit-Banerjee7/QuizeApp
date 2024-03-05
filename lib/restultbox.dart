@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
 class ResultBox extends StatelessWidget {
-  const ResultBox(this.dataSummery, {Key? key}) : super(key: key);
+  const ResultBox(this.dataSummary, {Key? key}) : super(key: key);
 
-  final List<Map<String, Object>> dataSummery;
+  final List<Map<String, Object>> dataSummary;
 
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Center(
         child: Column(
-          children: dataSummery.map((e) {
+          children: dataSummary.map((e) {
             return Padding(
               padding: const EdgeInsets.symmetric(vertical: 8.0),
               child: Row(
@@ -24,6 +24,7 @@ class ResultBox extends StatelessWidget {
                       style: const TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 16,
+                        color: Colors.white, // Text color set to white
                       ),
                     ),
                   ),
@@ -37,6 +38,7 @@ class ResultBox extends StatelessWidget {
                           style: const TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 16,
+                            color: Colors.white, // Text color set to white
                           ),
                         ),
                         const SizedBox(height: 4), // Adjust spacing between question and answers
@@ -44,18 +46,22 @@ class ResultBox extends StatelessWidget {
                           'Your Ans: ${e['your_ans'].toString()}',
                           style: TextStyle(
                             fontSize: 14,
+                            fontWeight: FontWeight.bold,
                             color: e['your_ans'] == e['correct_ans']
-                                ? const Color.fromARGB(255, 26, 64, 26) // Highlight correct answer
-                                : Colors.red, // Highlight incorrect answer
+                                ? Colors.greenAccent // Highlight correct answer
+                                : Colors.redAccent, // Highlight incorrect answer
                           ),
                         ),
-                          Text(
+                        SizedBox(
+                          child: Text(
                             'Correct Ans: ${e['correct_ans'].toString()}',
                             style: const TextStyle(
                               fontSize: 14,
-                              color: Color.fromARGB(255, 44, 100, 46),
+                              fontWeight: FontWeight.bold,
+                              color: Colors.yellowAccent, // Text color set to yellow
                             ),
                           ),
+                        ),
                       ],
                     ),
                   ),
